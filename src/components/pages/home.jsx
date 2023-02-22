@@ -1,7 +1,17 @@
+import BlogList from "../post/list";
+
 const Home = () => {
     return (
         <div>
-            <h1>Test</h1>
+            <div className='block-welcome'>
+                <h1>Welcome</h1>
+                <p>Little intro about myself</p>
+            </div>
+            <div className='block-blog'>
+                <h1>Posts</h1>
+                <p>Check my latest blog posts</p>
+                <BlogList/>
+            </div>
         </div>
     )
 }

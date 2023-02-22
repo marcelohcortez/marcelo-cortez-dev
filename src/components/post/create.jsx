@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { firestore } from '../firebase';
+import { firestore } from '../firebase/firebase';
 import { addDoc, collection, Timestamp } from "@firebase/firestore"
 
 const ref = collection(firestore,'posts');
@@ -9,10 +9,12 @@ const CreateBlog = () => {
     const [body, setBody] = useState('');
 
     const data = {title: title,
-            body: body,
-            publish: false,
-            published_on: Timestamp.now()}
-    const sub = (e) => {
+        body: body,
+        publish: false,
+        published_on: Timestamp.now()
+    }
+
+    const handleCreate = (e) => {
         e.preventDefault();
         addDoc(ref, data)
         .then(() => {
@@ -25,7 +27,7 @@ const CreateBlog = () => {
 
     return (
         <div>
-            <form onSubmit={(event) => {sub(event)}}>
+            <form onSubmit={(event) => {handleCreate(event)}}>
                 <input type='text' placeholder='Title' 
                     onChange={(e) => {setTitle(e.target.value)}} required/>
                 
