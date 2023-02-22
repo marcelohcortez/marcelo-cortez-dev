@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div>
+    <nav>
       <Link to={"/"}
         className='mr-2 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-1 px-2 border border-indigo-500 rounded'>
         Home
@@ -15,7 +15,7 @@ const Navbar = () => {
         className='mr-2 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-1 px-2 border border-indigo-500 rounded'>
         Create a post
       </Link>
-    </div>
+    </nav>
   )
 }
 

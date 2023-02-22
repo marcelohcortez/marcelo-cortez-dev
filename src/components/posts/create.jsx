@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { firestore } from '../firebase/firebase';
+import { firestore } from '../../config/firebase.config';
 import { addDoc, collection, Timestamp } from "@firebase/firestore"
 
 const ref = collection(firestore,'posts');
 
-const CreateBlog = () => {
+const CreatePost = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
 
@@ -41,4 +41,4 @@ const CreateBlog = () => {
     )
 }
 
-export default CreateBlog;
+export default CreatePost;

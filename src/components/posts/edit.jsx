@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { firestore } from '../firebase/firebase';
+import { firestore } from '../../config/firebase.config';
 import { doc, updateDoc, getDoc } from "@firebase/firestore"
 
 const BlogEdit = () => {

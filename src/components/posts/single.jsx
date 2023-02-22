@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 
-import { firestore } from '../firebase/firebase';
+import { firestore } from '../../config/firebase.config';
 import { doc, getDoc } from "@firebase/firestore"
 
 const BlogView = () => {

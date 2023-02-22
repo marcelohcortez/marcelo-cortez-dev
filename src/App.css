@@ -1,42 +1,106 @@
+*{
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
   text-align: center;
+  width: 100vw;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.app{
+  display: grid;
+  height: 100vh;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+nav{
+  height: 100px;
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+nav a{
+  font-size: 20px;
+  text-transform: uppercase;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav a:hover{
+  text-decoration: underline;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.block-welcome{
+  height: 300px;
+  display: grid;
+  background-color: bisque;
+  border-radius: 10px;
+  color: #111;
+  padding: 15px;
 }
-
-.card {
-  padding: 2em;
+.posts-list{
+  margin-bottom: 10px;
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  column-gap: 15px;
+  row-gap: 15px;
+  margin-top: 30px;
+  grid-auto-rows: 1fr;
 }
-
-.read-the-docs {
-  color: #888;
+.posts-card{
+  background-color: aliceblue;
+  padding: 15px;
+  border-radius: 10px;
+  color: #111;
+  display: grid;
+}
+.posts-card-title{
+  font-size: 26px;
+  font-weight: bold;
+}
+.posts-card-body{
+  font-size: 14px;
+}
+.block-blog{
+  margin-top: 60px;
+}
+.posts-card-options{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-content: flex-end;
+  column-gap: 10px;
+}
+.posts-card-options a{
+  background-color: cadetblue;
+  color: #fff;
+  padding: 10px;
+}
+.posts-card-options a:hover{
+  opacity: 0.7;
+  color: #1a1a1a;
+}
+form{
+  display: grid;
+  row-gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+form input{
+  padding: 15px;
+  font-size: 18px;
+}
+form textarea{
+  font-size: 18px;
+  padding: 15px;
+}
+form button{
+  background-color: cadetblue;
+  padding: 15px;
+  width: 200px;
+  margin: 0 auto;
+}
+form button:hover{
+  opacity: 0.7;
+  color: #1a1a1a;
 }
